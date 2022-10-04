@@ -37,8 +37,11 @@
 <meta property="og:image" content="http://example.com/images/comfigure%20disqus.png">
 <meta property="og:image" content="http://example.com/images/comment.png">
 <meta property="og:image" content="http://example.com/images/%E5%AE%8C%E6%88%90.png">
+<meta property="og:image" content="http://example.com/images/ADMIN.png">
+<meta property="og:image" content="http://example.com/images/SETTING.png">
+<meta property="og:image" content="http://example.com/images/chinese.png">
 <meta property="article:published_time" content="2022-10-03T06:29:05.000Z">
-<meta property="article:modified_time" content="2022-10-04T08:19:30.842Z">
+<meta property="article:modified_time" content="2022-10-04T09:27:24.234Z">
 <meta property="article:author" content="LinTianShin">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://example.com/images/dis%E8%A8%BB%E5%86%8A.png">
@@ -189,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-10-04 16:19:30" itemprop="dateModified" datetime="2022-10-04T16:19:30+08:00">2022-10-04</time>
+                <time title="Modified: 2022-10-04 17:27:24" itemprop="dateModified" datetime="2022-10-04T17:27:24+08:00">2022-10-04</time>
               </span>
 
           
@@ -219,7 +222,7 @@
       
         <p>未完待續…</p>
 <span id="more"></span>
-<h1 id="安裝-DISQUS"><a href="#安裝-DISQUS" class="headerlink" title="安裝 DISQUS"></a>安裝 DISQUS</h1><ol>
+<h1 id="設定-DISQUS"><a href="#設定-DISQUS" class="headerlink" title="設定 DISQUS"></a>設定 DISQUS</h1><ol>
 <li><p>註冊 <a target="_blank" rel="noopener" href="https://disqus.com/">DISQUS</a> 帳號<br><img src="/images/dis%E8%A8%BB%E5%86%8A.png"></p>
 </li>
 <li><p>按 GET STARTED<br><img src="/images/GETSTART.png"></p>
@@ -238,24 +241,32 @@
 <li>Select Plan 選擇免費方案 (Basic)<br> <img src="/images/start.png"><br> <img src="/images/basic.png"></li>
 <li>Install Disqus &gt; Select Platform ，列表裡並沒有 Hexo，所以我們選擇最底下的<br> <code>I don&#39;t see my platform listed, install manually with Universal Code</code><br> <img src="/images/i%20dont%20see.png"></li>
 <li>Configure Disqus 下的 Website URL 填你的網站網址 (https:&#x2F;&#x2F;使用者名稱.github.io&#x2F;)<br> <img src="/images/comfigure%20disqus.png"></li>
-<li>Setup Moderation 選擇 <code>Balanced</code><br> <img src="/images/comment.png"><br> Setup Moderation 是評論的審核機制，你可以選擇不受限的 Balanced，或是評論是需要經過系統審核或有限的 Strict</li>
+<li>Setup Moderation 選擇 <code>Balanced</code><br>  <img src="/images/comment.png"></li>
 </ol>
- <details> <summary> Balanced 與 Strict 的差別 </summary>
-
+<p>  Setup Moderation 是評論的審核機制，你可以選擇不受限的 Balanced，或是評論是需要經過系統審核或有限的 Strict <details> <summary> Balanced 與 Strict 的差別 </summary></p>
 <ul>
 <li>圖片、影片或連結允許&#x2F;不允許在留言裡</li>
 <li>訪客留言是允許&#x2F;不允許的</li>
 <li>留言被 flagged (被標記有害的意思?) 5次&#x2F;3次 會被送到待審核的機制中</li>
 <li>留言內有限制或敏感字的部份都會被自動刪除</li>
 <li>有害的評論 需要你的審核才能顯示&#x2F;自動刪除</li>
-<li>Strict 的部份，話題(Threads)會在 30 天後自動關閉  </details></li>
+<li>Strict 的部份，話題(Threads)會在 30 天後自動關閉</li>
 </ul>
-</li>
+  </details></li>
 <li><p>按 右下角 <code>Setup Complete!</code> 之後，看到這個頁面就完成了<br><img src="/images/%E5%AE%8C%E6%88%90.png"></p>
 </li>
 </ol>
-<h1 id="配置-DISQUS"><a href="#配置-DISQUS" class="headerlink" title="配置 DISQUS"></a>配置 DISQUS</h1><blockquote>
-<p>參考網站 :<br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10242269">【Day 8】如何安裝 Disqus 留言板</a><br><a target="_blank" rel="noopener" href="https://blog.balabambe.com/2021/07/31/Hexo-%E6%96%B0%E5%A2%9E-Disqus-%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD/"> Hexo 新增 Disqus 留言板功能</a></p>
+<h1 id="配置-DISQUS"><a href="#配置-DISQUS" class="headerlink" title="配置 DISQUS"></a>配置 DISQUS</h1><ol>
+<li>到你的主題下 _config.yml 檔案 (我的路徑 : themes&#x2F;next&#x2F;_config.ym)</li>
+<li>找到 # Disqus ，將 enable 設為 true<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Disqus</span><br><span class="line">disqus:</span><br><span class="line">  enable: true # enable 開啟評論</span><br><span class="line">  shortname: AAA # 就是在 Website Name 裡填的名稱</span><br><span class="line">  count: true # count 是用於設定是否顯示評論數量</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>!!! 這樣就完成了 !!!<br>可以去測試看看能不能成功</p>
+<hr>
+<p><strong>中文繁體設置</strong><br>打開 DISQUS 按 Admin(後台管理)<br><img src="/./images/ADMIN.png"><br>Setting &gt; General 找到 Language 選 Chinese(Taiwan) 最後按 Save<br><img src="/images/SETTING.png"><br><img src="/images/chinese.png"><br>DISQUS 的中文版還不是很完整，許多還是英文字，所以我個人是覺得用英文的也沒差。</p>
+<hr></hr>
+
+<blockquote>
+<p>參考網站 :<br><a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10242269">【Day 8】如何安裝 Disqus 留言板</a><br><a target="_blank" rel="noopener" href="https://blog.balabambe.com/2021/07/31/Hexo-%E6%96%B0%E5%A2%9E-Disqus-%E7%95%99%E8%A8%80%E6%9D%BF%E5%8A%9F%E8%83%BD/">  Hexo 新增 Disqus 留言板功能</a></p>
 </blockquote>
 
     </div>
@@ -341,7 +352,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D-DISQUS"><span class="nav-number">1.</span> <span class="nav-text">安裝 DISQUS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-DISQUS"><span class="nav-number">2.</span> <span class="nav-text">配置 DISQUS</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%A8%AD%E5%AE%9A-DISQUS"><span class="nav-number">1.</span> <span class="nav-text">設定 DISQUS</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-DISQUS"><span class="nav-number">2.</span> <span class="nav-text">配置 DISQUS</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
